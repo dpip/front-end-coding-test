@@ -1,7 +1,7 @@
-# Test 1
+# Challenge #1
 _Note: If you're viewing this page on GitHub, some of the links will 404. Links are relative to the localhost env._
 
-Click here to go to the rendered view of the first test: [Test 1](../example1.html)
+Click here to go to the rendered view of the first test: [Challenge #1](../example1.html)
 
 The files for this test live in the `example1` folder and contains the following assets:
 - `example1.js`: This is the custom JS file for this test.
