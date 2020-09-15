@@ -28,6 +28,7 @@ module.exports = function ( grunt ) {
         // https://github.com/sindresorhus/grunt-sass
         sass: {
             options: {
+                implementation: require("node-sass"),
                 includePaths: [ paths.src + "/sass" ],
                 sourceMap: true,
                 outputStyle: "expanded"
@@ -77,17 +78,7 @@ module.exports = function ( grunt ) {
                 map: true,
                 processors: [
                     require( "pixrem" )(), // Add fallbacks for rem units
-                    require( "autoprefixer" )( {
-                        browsers: [
-                            "last 2 Chrome versions",
-                            "Firefox >= 45",
-                            "last 2 Safari versions",
-                            "last 1 ie version",
-                            "last 1 Edge version",
-                            "last 4 iOS versions",
-                            "last 3 Android versions"
-                        ]
-                    } ), //End auto prefixer
+                    require( "autoprefixer" )(), //End auto prefixer
                     require( "cssnano" )() //Minify
                 ]
             },
@@ -127,7 +118,7 @@ module.exports = function ( grunt ) {
         uglify: {
             options: {
                 mangle: {
-                    except: [ "$", "jQuery" ]
+                    reserved: [ "$", "jQuery" ]
                 },
                 sourceMap: true
             },
