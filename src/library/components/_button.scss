@@ -1,5 +1,22 @@
 .test-button {
 	&--component {
-		
+		width: fit-content;
+		padding: 16px 32px;
+		transition: .3s cubic-bezier(.5,0,.5,1);
+		font-weight: 700;
+		border: 1px solid $theme-color--red-core;
+		border-radius: 3px;
+		cursor: pointer;
+		background-color: $theme-color--red-core;
+		&:hover {
+			background-color: $theme-color--red-dark;
+			color: #fff;
+			transform: translateX(3px);
+		}
+		a {
+			color: inherit;
+  		text-decoration: inherit;
+			font-family: $base-font-family;
+		}
 	}
 }

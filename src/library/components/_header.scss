@@ -1,7 +1,12 @@
 .test-header {
-	&--component {}
+	&--component {
+	}
 	&-title {
 		@extend %default-title;
 	}
-	&-headline {}
+	&-headline {
+		@extend %default-headline;
+		color: #fff;
+		padding: $band-padding !important;
+	}
 }

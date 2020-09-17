@@ -5,22 +5,22 @@
 {# Break apart aside position values for better control of logic #}
 {%- if has_header or has_body or has_footer -%}
     <section class="test-band--layout">
-        <div class="test-band-container">
-            {% if has_header %}
-                <header class="test-band-header">
-                    {% block band_header %}{% endblock %}
-                </header>
-        {% endif %}
-        {% if has_body %}
-                <div class="test-band-content">
-                    {% block band_body %}{% endblock %}
-                </div>
-            {% endif %}
-        {% if has_footer %}
-        <footer class="test-band-footer">
-                    {% block band_footer %}{% endblock %}
+        <div class="test-band--container">
+          {% if has_header %}
+            <header class="test-band--header">
+                {% block band_header %}{% endblock %}
+            </header>
+          {% endif %}
+          {% if has_body %}
+            <div class="test-band--content">
+                {% block band_body %}{% endblock %}
+            </div>
+          {% endif %}
+          {% if has_footer %}
+            <footer class="test-band--footer">
+                        {% block band_footer %}{% endblock %}
+            </footer>
+          {% endif %}
         </div>
-        {% endif %}
-    </footer>
     </section>
 {%- endif -%}

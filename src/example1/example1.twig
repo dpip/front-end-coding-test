@@ -7,27 +7,29 @@
 
 {% block content %}
 	{% embed "../library/layouts/_band.twig" %}
-	
+
 		{% block band_header %}
 			{% include "../library/components/_header.twig" with {
 				"title": data.header.title,
 				"headline": data.header.headline
 			} only %}
 		{% endblock %}
-		
+
 		{% block band_body %}
+		<div id="card-wrapper" {% if data.cards.length >= 1 %}data-test-layout="true"{% endif %} >
 			{% for card in data.cards %}
 				{% for side in card %}
 					{% include "../library/layouts/_card.twig" with side only %}
 				{% endfor %}
 			{% endfor %}
+		</div>
 		{% endblock %}
-	
+
 		{% block band_footer %}
 			{% include "../library/components/_copy.twig" with {
 				"content": data.footer.content
 			} only %}
 		{% endblock %}
-	
+
 	{% endembed %}
 {% endblock %}

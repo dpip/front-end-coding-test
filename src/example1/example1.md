@@ -14,7 +14,7 @@ The files for this test live in the `example1` folder and contains the following
 ### Mark-up
 1. In example1.twig, inside the body block, check for more than one card in the array:
 	- if `true` then create a wrapper div with the attribute: `data-test-layout`
-	- if `false` then do not print `data-test-layout` attribute
+	- if `false` then do not print `data-test-layout` attributev
 2. Clean up the markup in the `_button.twig` template
 3. Fix the semantic markup in the `_band.twig` template
 

@@ -1,4 +1,5 @@
-<article class="test-card--layout">
+
+<article class="test-card--layout card-{{title | last}}" data-card-view="{{title | split(' ')[0] | lower}}" data-test-flip-on="{{false}}">
     {%- if title is not empty %}
         <header class="test-card-header">
             {% include "../components/_header.twig" with {
