@@ -5,23 +5,26 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
-    &-container {
-        @extend %default--container;
-        > * {
-            margin-bottom: $band-padding / 3;
-        }
+    &--container {
+        max-width: 1170px;
     }
-    &-content {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
-        grid-gap: 15px;
-        // Build a tablet/mobile layout
+    &--content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    &-footer {
-        float: right;
-    }
-    &-copyright {
-        float: left;
+
+    &--footer {
+        // float: right;
+        padding: $band-padding 0px;
+        // background-color: #252525;
+        margin-top: $band-padding;
+        width: 100%;
     }
 }

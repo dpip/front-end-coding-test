@@ -4,9 +4,8 @@ rh.test.flip = {
         trigger: "data-test-flip-on",
         visible: "data-test-visible"
     },
-    action: function( $el ) {
-        console.log( "click event", $el.data( "card-view" ) );
-
+    action: function( $el, event ) {
+        event.preventDefault();
         var cardClass = $el.attr( "class" ).split( " " ).pop();
 
         if ( $el.data( "card-view" ) === "front" ) {
@@ -31,8 +30,8 @@ $( "[" + rh.test.flip.attr.trigger + "]", context ).each( function( idx, val ) {
         $( this ).hide();
     }
 
-    $( this ).on( "click", function() {
-        rh.test.flip.action( $( this ) );
+    $( this ).on( "click", function( event ) {
+        rh.test.flip.action( $( this ), event );
     } );
 
 } );

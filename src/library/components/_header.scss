@@ -7,6 +7,48 @@
 	&-headline {
 		@extend %default-headline;
 		color: #fff;
-		padding: $band-padding !important;
+		// padding: $band-padding !important;
+		font-size: 48px;
 	}
+}
+
+.test-band--header {
+	padding: 0px $card-spacing;
+	padding-bottom: $band-padding;
+	.test-header-secondary {
+		color: white;
+		font-family: $base-font-family;
+		border-left: 3px solid $theme-color--red-core;
+		padding-left: 10px;
+		animation-name: animHeader;
+	  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+	  animation-duration: 0.5s;
+		animation-delay: 0.5s;
+	  animation-fill-mode: forwards;
+		opacity: 0;
+		transform: translateX(0em);
+		span {
+			color: $theme-color--red-core;
+		}
+	}
+	.test-button--component {
+		animation-name: animHeader;
+	  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+	  animation-duration: 0.25s;
+		animation-delay: 1s;
+	  animation-fill-mode: forwards;
+		opacity: 0;
+		transform: translateX(0em);
+	}
+}
+
+@keyframes animHeader {
+  0% {
+    opacity: 0;
+    transform: translateX(-1.5em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0em);
+  }
 }

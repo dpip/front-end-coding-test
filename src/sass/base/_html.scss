@@ -9,4 +9,5 @@ html, body {
   //:: removes padding and margin from html and body for the background image to span the full viewport
   padding: 0px;
   margin: 0px;
+  min-height: 100vh;
 }
